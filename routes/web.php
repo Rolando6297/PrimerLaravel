@@ -17,7 +17,7 @@ Route::get('/', function () {
  
     return view('welcome');
 });
-Route::get('/bienvenida', function () {
- 
-   return "hola mundo";
+Route::get('/custom', function () {
+    $mej= "mensaje del servidor";
+   return view('custom', ['mej'=> $mej]);
 });
