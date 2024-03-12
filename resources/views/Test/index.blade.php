@@ -7,28 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    {{$name}}
-    {{-- $age --}}
-    {!!$html!!}
+@extends('layout.master')
+@section('content')
 
-    @if($name == 'rodlando')
-    es true {{$name}} 
-    @elseif($name == 'Rolando')
-    es mayuscula {{$name}}
-    @else
-    es false {{$name}}
-    @endif
+@include('fragmentos.subview')
+{{$name}}
+{{-- $age --}}
+
+@include('fragmentos.subview')
+@if($name == 'rodlando')
+es true {{$name}} 
+@elseif($name == 'Rolando')
+es mayuscula {{$name}}
+@else
+es false {{$name}}
+@endif
 
 
-    @foreach ($array as $item)
-        <h1>{{$item}}</h1>
-    @endforeach
-    @forelse ($array as $item)
+@foreach ($array as $item)
     <h1>{{$item}}</h1>
-    @empty
-        <h1>No hay registros</h1>
-    
-    @endforelse 
+@endforeach
+@forelse ($array as $item)
+<h1>{{$item}}</h1>
+@empty
+    <h1>No hay registros</h1>
+
+@endforelse 
+
+@endsection
+
+   
 
 </body>
 </html>

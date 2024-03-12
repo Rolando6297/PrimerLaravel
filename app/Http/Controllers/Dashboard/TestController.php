@@ -13,8 +13,11 @@ class TestController extends Controller
      */
     public function index()
     {
-        return view("test/index", ['name' => 'Rolando' , 'age'=> 16, 'html' => '<h1>Titulo</h1>' , 'array' => [1,2,3,4,5,'Rolando']]);
-    }
+        $array = [1,2,3,4,5,'Rolando'];
+        $name = "Rolando";
+    //    return view("test/index", ['name' => 'Rolando' , 'age'=> 16, 'html' => '<h1>Titulo</h1>' , 'array' => $post]);
+          return view("test/index", compact("array", "name"));
+}
 
     function test(){
         User::find(1);
