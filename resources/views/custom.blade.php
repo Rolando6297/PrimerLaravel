@@ -8,7 +8,9 @@
 <body>
     <h1>hola</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aspernatur rerum consequuntur voluptatem exercitationem quam ipsam vero eius autem, laudantium perferendis suscipit dolores nihil quis doloribus, laboriosam, pariatur reiciendis eum.</p>
-    <?php echo $mej ?>
+    <h1><?php echo $mej ?></h1>
+    <h1><?=$mej ?></h1>
+    <h1>{{$mej}} {{$edad}}</h1>
 
 </body>
 </html>
