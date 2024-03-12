@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\Dashboard\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +28,7 @@ Route::get('/escribeme', function () {
 })->name('contacto');
 
 //Route::get('/Test', [TestController::class,'test']);
-Route::get('/Test', [App\Http\Controllers\TestController::class,'test']);
+Route::get('/Test', [App\Http\Controllers\Dashboard\TestController::class,'test']);
 
 Route::get('/User', [App\Http\Controllers\UserController::class,'test']);
+Route::get('/UserInf', [App\Http\Controllers\Dashboard\TestController::class,'index']);
